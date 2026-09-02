@@ -44,18 +44,22 @@ POST   /api/simmilar_details/
 GET    /api/details/{id}/
 DELETE /api/cars/{id}/
 
-## Installation
+## Docker
 
-git clone ...
-cd car-service-api
+Build the Docker image:
 
-python -m venv .venv
-source .venv/bin/activate
+```bash
+docker build -t car-service-api .
 
-pip install -r requirements.txt
+## Run the container:
 
-python manage.py migrate
-python manage.py runserver
+docker run --env-file .env -p 8000:8000 car-service-api
+
+## The API & Swagger documentation will be available at:
+
+http://localhost:8000
+
+http://localhost:8000/docs
 
 ## Authentication
 
