@@ -18,6 +18,7 @@ built with FastAPI.
 - FastAPI
 - SQLite / SQLAlchemy
 - JWT
+- Docker
 - Git
 
 ## API Endpoints
@@ -77,4 +78,3 @@ alembic - database management / migrations
 
 - PostgreSQL
 - Automated tests
-- Docker
