@@ -1,8 +1,14 @@
+import os
+from dotenv import load_dotenv
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
-# Database URL (in this foulder)
-DATABASE_URL = "sqlite:///./database.db"
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL is not set")
 
 # Engine -> interaction object
 engine = create_engine(
